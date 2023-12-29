@@ -1,0 +1,2 @@
+#!/bin/bash
+pack -N4 <<< bSCHOOL > school.mgc; echo Magic file 'school.mgc' created!
