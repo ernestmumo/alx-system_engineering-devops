@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -a1 | sort -V | sed -e 's/^\./.,/' -e 's/^[^.]/&,/' -e 's/ /,/' -e 's/$/\n/'
+ls -la | awk '{if ($9 ~ /^[0-9a-zA-Z]/) {print $9} else if ($9 == ".") {dot="."} else if ($9 == "..") {dotdot=".."} else {print $9 "/"} }' | sort -d -t$'\n' -k1,1
