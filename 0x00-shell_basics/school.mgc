@@ -1,2 +1,2 @@
 #!/bin/bash
-pack -N4 <<< bSCHOOL > school.mgc; echo Magic file 'school.mgc' created!
+echo -e "0\tstring\tSCHOOL\tschool" > school.mgc; echo Magic file 'school.mgc' created!
