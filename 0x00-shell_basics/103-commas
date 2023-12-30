@@ -1,2 +1,2 @@
-#!/bin/bash  ls -a1 > temp_file
-sort -V temp_file | sed -e 's/^\./.,/' -e 's/^[^.]/&,/' -e 's/ /,/' -e 's/$/\n/'  rm temp_file
+#!/bin/bash
+ls -a1 | sort -V | sed -e 's/^\./.,/' -e 's/^[^.]/&,/' -e 's/ /,/' -e 's/$/\n/'
