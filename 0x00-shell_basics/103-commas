@@ -1,1 +1,2 @@
-#!/bin/bash printf ".,..," ; ls -a1 | sort -V | sed -e 's/[^0-9a-zA-Z]/\1/g' | tr -d '\n' | sed -e 's/$/,/g'
+#!/bin/bash
+printf ".,..," ; ls -a1 | sort -V | sed -e 's/[^0-9a-zA-Z]/\1/g' | tr -d '\n' | sed -e 's/$/,/g'
