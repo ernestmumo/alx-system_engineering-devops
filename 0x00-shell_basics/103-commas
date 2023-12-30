@@ -1,2 +1,2 @@
 #!/bin/bash
-printf "%s" "$(ls -a1 | LC_COLLATE=C sort -df | sed ':a;N;$!ba;s/\n/, /g; s/,\s$/,/')"
+printf "%s," . .. $(ls -a | grep -E '[0-9a-zA-Z]+' | sort -k1,1d -k2,2n | sed 's/[^0-9a-zA-Z]/ /g' | tr '\n' ','; printf "\n")
