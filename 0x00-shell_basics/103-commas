@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -a1 | sort -V | sed 's/^\./.,/;s/^[^.]/&,/;s/ /,/;s/$/\n/'
+ls -a1 | sort -V | sed -e 's/^\./.,/' -e 's/^[^.]/&,/' -e 's/ /,/' -e 's/$/\n/'
