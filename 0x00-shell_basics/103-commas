@@ -1,2 +1,2 @@
 #!/bin/bash
-printf ".,..," ; ls -a1 | sort -V | sed -e 's/[^0-9a-zA-Z]/\1/g' | tr -d '\n' | sed -e 's/$/,/g'
+shopt -s dotglob nullglob; printf "%s, " .* .[!.]* .. | sort -V | head -n -1; echo
